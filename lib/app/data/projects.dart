@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mypage/app/data/my_image_model.dart';
 
 class Project {
@@ -32,8 +31,10 @@ class Project {
     shotDescription = json['shotDescription'];
     likes = json['likes'];
     images = json['images'];
-    if(json['images']!=null){
-      json.
+    if (json['images'] != null) {
+      // json.
+      images = json['images'].map((image) =>
+          MyImageModel(image: image['image'], blurhash: image['blurhash']));
     }
     links = Links.fromJson(json['links']);
   }

@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:mypage/app/data/my_image_model.dart';
 import 'package:mypage/app/data/projects.dart';
 
 class HomeController extends GetxController {
